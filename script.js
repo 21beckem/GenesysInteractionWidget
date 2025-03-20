@@ -132,6 +132,7 @@ function initializeApplication() {
     //
     // Note: Pass the query string parameters in the 'state' parameter so that they are returned
     //       to us after the implicit grant redirect.
+    alert('attempting Client Connect:\n' + redirectUri + '\n' + appParams.clientId)
     client.loginImplicitGrant(appParams.clientId, redirectUri, { state: integrationQueryString })
         .then((data) => {
             // User Authenticated
